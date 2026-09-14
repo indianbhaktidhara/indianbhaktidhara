@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Bhakti Dhara | Sacred Devotional Hub & Sanatan Wisdom</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            DEFAULT: '#FF6F00',
+                            dark: '#E65100',
+                            light: '#FFA726',
+                            glow: '#FFB74D'
+                        },
+                        gold: {
+                            DEFAULT: '#FFD700',
+                            light: '#FFE57F',
+                            dark: '#DAA520',
+                            deep: '#B8860B'
+                        },
+                        maroon: {
+                            DEFAULT: '#4A0000',
+                            deep: '#2C0005',
+                            light: '#6B0A13',
+                            card: '#3A040B'
+                        },
+                        ivory: '#FAF6F0'
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        rozha: ['Rozha One', 'serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'spin-slow': 'spin 45s linear infinite',
+                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+                        'float': 'float 4s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.85', transform: 'scale(1.04)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-6px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #2C0005;
+            color: #FAF6F0;
+            overflow-x: hidden;
+        }
+
+        .heading-serif { font-family: 'Cinzel', serif; }
+        .heading-rozha { font-family: 'Rozha One', serif; }
+
+        .glass-card {
+            background: rgba(58, 4, 11, 0.82);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 215, 0, 0.22);
+        }
+
+        .glass-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(255, 215, 0, 0.65);
+            box-shadow: 0 12px 35px -10px rgba(255, 111, 0, 0.35);
+            transform: translateY(-4px);
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #FFF5C0 0%, #FFD700 45%, #FF8C00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .diya-flame {
+            background: radial-gradient(circle, #FFF 15%, #FFD700 45%, #E65100 85%, transparent 100%);
+            box-shadow: 0 0 18px #FF8C00, 0 0 35px #E65100;
+            animation: flameFlicker 0.15s infinite alternate ease-in-out;
+        }
+
+        @keyframes flameFlicker {
+            0% { transform: scale(1) rotate(-1.5deg); opacity: 0.92; }
+            100% { transform: scale(1.1) rotate(1.5deg); opacity: 1; }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1F0003; }
+        ::-webkit-scrollbar-thumb { background: #DAA520; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FF8C00; }
+
+        .bar-anim { animation: wave 1.2s ease-in-out infinite alternate; }
+        @keyframes wave {
+            0% { height: 4px; }
+            100% { height: 26px; }
+        }
+
+        #toast {
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-maroon-deep text-ivory min-h-screen flex flex-col selection:bg-saffron selection:text-maroon-deep">
+
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-10">
+        <div class="absolute -top-48 -left-48 w-[650px] h-[650px] rounded-full border-8 border-gold animate-spin-slow flex items-center justify-center">
+            <div class="w-[500px] h-[500px] rounded-full border-4 border-dashed border-saffron flex items-center justify-center">
+                <div class="w-[320px] h-[320px] rounded-full border-2 border-gold flex items-center justify-center">
+                    <span class="text-9xl text-gold/30 heading-serif">ॐ</span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute -bottom-48 -right-48 w-[750px] h-[750px] rounded-full border-8 border-gold animate-spin-slow flex items-center justify-center" style="animation-direction: reverse;">
+            <div class="w-[550px] h-[550px] rounded-full border-4 border-dashed border-saffron"></div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-maroon-deep/90 backdrop-blur-md border-b border-gold/20 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand Title -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="relative w-12 h-12 rounded-full bg-gradient-to-tr from-saffron to-gold flex items-center justify-center shadow-lg shadow-saffron/30 group-hover:scale-105 transition-transform">
+                        <span class="text-2xl font-bold text-maroon-deep heading-serif">ॐ</span>
+                        <div class="absolute -top-1.5 right-0 w-3.5 h-4.5 rounded-full diya-flame"></div>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-extrabold heading-serif text-gold-gradient tracking-wide block leading-none">Indian Bhakti Dhara</span>
+                        <span class="text-[10px] tracking-widest uppercase text-saffron-light font-medium">Premium Devotional Studio</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex items-center space-x-6 font-medium text-sm">
+                    <a href="#hero" class="hover:text-gold transition-colors text-gold">Home</a>
+                    <a href="#media-studio" class="hover:text-gold transition-colors flex items-center space-x-1">
+                        <i class="fas fa-clapperboard text-saffron text-xs"></i>
+                        <span>Videos & Shorts</span>
+                    </a>
+                    <a href="#audio-sanctuary" class="hover:text-gold transition-colors">108 Mala Sanctuary</a>
+                    <a href="#social-engine" class="hover:text-gold transition-colors flex items-center space-x-1.5">
+                        <span>11 Platforms</span>
+                        <span class="px-1.5 py-0.2 bg-saffron text-maroon-deep font-bold text-[10px] rounded-full">Hub</span>
+                    </a>
+                    <a href="#panchang" class="hover:text-gold transition-colors">Panchang</a>
+                    <a href="#festivals" class="hover:text-gold transition-colors">Calendar</a>
+                </nav>
+
+                <!-- Header Action Buttons -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="openAddMediaModal()" class="flex items-center space-x-2 px-3.5 py-2 rounded-full bg-gradient-to-r from-saffron to-gold hover:from-saffron-dark hover:to-gold-dark text-maroon-deep font-bold text-xs sm:text-sm shadow-lg shadow-saffron/20 hover:scale-105 transition-all">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add Video/Short</span>
+                    </button>
+
+                    <button onclick="openGithubModal()" class="flex items-center space-x-2 px-3.5 py-2 rounded-full bg-gold/10 border border-gold/40 hover:bg-gold/20 text-gold text-xs sm:text-sm font-semibold transition-all">
+                        <i class="fab fa-github"></i>
+                        <span class="hidden sm:inline">Import & Deploy</span>
+                    </button>
+
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-gold focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-maroon-deep border-b border-gold/20 px-4 pt-2 pb-5 space-y-3">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-gold font-medium">Home</a>
+            <a href="#media-studio" onclick="toggleMobileMenu()" class="block py-2 hover:text-gold">Videos & Sacred Shorts Studio</a>
+            <a href="#audio-sanctuary" onclick="toggleMobileMenu()" class="block py-2 hover:text-gold">108 Mala Audio Sanctuary</a>
+            <a href="#social-engine" onclick="toggleMobileMenu()" class="block py-2 hover:text-gold">11 Platform Engine</a>
+            <a href="#panchang" onclick="toggleMobileMenu()" class="block py-2 hover:text-gold">Daily Panchang & Slokas</a>
+            <a href="#festivals" onclick="toggleMobileMenu()" class="block py-2 hover:text-gold">Festival Calendar</a>
+            <button onclick="toggleMobileMenu(); openAddMediaModal();" class="w-full text-left py-2.5 px-3 rounded-lg bg-saffron text-maroon-deep font-bold flex items-center space-x-2">
+                <i class="fas fa-plus-circle"></i>
+                <span>Add Devotional Video or Short</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow z-10">
+
+        <section id="hero" class="relative py-12 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-saffron/15 border border-saffron/40 text-saffron-light text-xs sm:text-sm font-medium">
+                        <i class="fas fa-om text-gold"></i>
+                        <span>Sanatan Dharma Sacred Wisdom & Premium Media</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold heading-serif leading-tight">
+                        <span class="block text-ivory">Devotional Videos, Shorts</span>
+                        <span class="text-gold-gradient">& Vedic Chants Portal</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Curate, manage, and showcase sacred Aartis, Mantras, Kathas, and vertical Shorts across your 
+                        <strong class="text-gold font-semibold">11 official platforms</strong> for <span class="text-saffron-light font-semibold">Indian Bhakti Dhara</span>.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#media-studio" class="px-6 py-3 rounded-full bg-gradient-to-r from-saffron to-gold text-maroon-deep font-bold hover:shadow-xl hover:shadow-saffron/30 hover:scale-105 transition-all flex items-center space-x-2 text-sm">
+                            <i class="fas fa-play"></i>
+                            <span>Watch Videos & Shorts</span>
+                        </a>
+
+                        <button onclick="openAddMediaModal()" class="px-6 py-3 rounded-full glass-card hover:border-gold text-gold font-semibold flex items-center space-x-2 transition-all hover:bg-gold/10 text-sm">
+                            <i class="fas fa-plus text-xs"></i>
+                            <span>Add Content to Channel</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl border border-gold/40 relative overflow-hidden">
+                        <div class="absolute -right-10 -top-10 w-32 h-32 rounded-full border border-gold/30"></div>
+                        <div class="flex items-center justify-between mb-8">
+                            <span class="text-xs uppercase tracking-[0.2em] text-saffron font-semibold">Premium workspace</span>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-[10px] font-bold uppercase">On demand</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="p-4 rounded-2xl bg-gold/10 border border-gold/20"><p class="text-2xl font-bold text-gold" id="heroMediaCount">0</p><p class="text-[10px] uppercase tracking-wider text-gray-400">Curated titles</p></div>
+                            <div class="p-4 rounded-2xl bg-saffron/10 border border-saffron/20"><p class="text-2xl font-bold text-saffron-light" id="heroFavoriteCount">0</p><p class="text-[10px] uppercase tracking-wider text-gray-400">Saved favorites</p></div>
+                        </div>
+                        <div class="space-y-3 text-sm text-gray-300">
+                            <div class="flex items-center gap-3"><i class="fas fa-layer-group text-gold"></i><span>Organize videos, shorts, and mantras</span></div>
+                            <div class="flex items-center gap-3"><i class="fas fa-bookmark text-gold"></i><span>Build a personal devotional library</span></div>
+                            <div class="flex items-center gap-3"><i class="fas fa-download text-gold"></i><span>Export your collection anytime</span></div>
+                        </div>
+                        <a href="#media-studio" class="mt-8 w-full py-3 rounded-xl bg-gradient-to-r from-saffron to-gold text-maroon-deep font-bold text-sm flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform"><i class="fas fa-compass"></i> Explore the library</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="media-studio" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gold/15">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="px-3 py-1 rounded-full bg-saffron/15 text-saffron text-xs font-semibold tracking-widest uppercase border border-saffron/30">Devotional Media Studio</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold heading-serif text-gold-gradient mt-2">Videos & Sacred Shorts</h2>
+                    <p class="text-gray-300 text-xs sm:text-sm font-light mt-1">Browse, save, and curate long-form videos or vertical sacred shorts.</p>
+                </div>
+
+                <div class="flex items-center space-x-3 self-start md:self-auto">
+                    <button onclick="exportLibrary()" class="px-3.5 py-2.5 rounded-full bg-gold/10 border border-gold/30 text-gold hover:bg-gold/20 text-xs font-semibold transition-all">
+                        <i class="fas fa-download mr-1"></i> Export Library
+                    </button>
+                    <button onclick="resetToDefaultMedia()" class="px-3.5 py-2.5 rounded-full bg-gold/10 border border-gold/30 text-gold hover:bg-gold/20 text-xs font-semibold transition-all">
+                        <i class="fas fa-rotate-left mr-1"></i> Reset Media
+                    </button>
+
+                    <button onclick="openAddMediaModal()" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-saffron to-gold text-maroon-deep font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all flex items-center space-x-2">
+                        <i class="fas fa-plus-circle text-base"></i>
+                        <span>Add Video or Short</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Media Type Tabs -->
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-gold/20">
+                <div class="flex flex-wrap gap-2">
+                    <button id="tab-all" onclick="setMediaTypeFilter('all')" class="media-tab-btn px-4 py-2 rounded-full text-xs font-semibold bg-gold text-maroon-deep border border-gold shadow-md">
+                        <i class="fas fa-border-all mr-1.5"></i> All Content (<span id="count-all">0</span>)
+                    </button>
+                    <button id="tab-video" onclick="setMediaTypeFilter('video')" class="media-tab-btn px-4 py-2 rounded-full text-xs font-semibold glass-card text-ivory border border-gold/30 hover:border-gold">
+                        <i class="fas fa-video mr-1.5 text-saffron"></i> Long Videos (<span id="count-video">0</span>)
+                    </button>
+                    <button id="tab-short" onclick="setMediaTypeFilter('short')" class="media-tab-btn px-4 py-2 rounded-full text-xs font-semibold glass-card text-ivory border border-gold/30 hover:border-gold">
+                        <i class="fas fa-mobile-screen-button mr-1.5 text-saffron"></i> Sacred Shorts (<span id="count-short">0</span>)
+                    </button>
+                </div>
+
+                <!-- Category Dropdown Filter -->
+            <div class="flex items-center space-x-2 w-full sm:w-auto">
+                <span class="text-xs text-gray-400 whitespace-nowrap"><i class="fas fa-filter text-gold mr-1"></i>Category:</span>
+                <select id="categorySelect" onchange="filterMediaGrid()" class="w-full sm:w-auto px-3 py-1.5 rounded-xl bg-maroon-card border border-gold/40 text-ivory text-xs focus:outline-none focus:border-gold">
+                    <option value="all">All Categories</option>
+                    <option value="Aarti & Stotra">Aarti & Stotra</option>
+                    <option value="Bhakti Sangeet">Bhakti Sangeet / Bhajan</option>
+                    <option value="Daily Mantras">Daily Mantras</option>
+                    <option value="Katha & Pravachan">Katha & Pravachan</option>
+                    <option value="Festival Special">Festival Special</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Premium Search and Library Controls -->
+        <div class="flex flex-col lg:flex-row gap-3 mb-8">
+        <div class="max-w-md relative flex-1">
+            <input type="text" id="mediaSearchInput" onkeyup="filterMediaGrid()" placeholder="Search title, deity, or chant (e.g. Shiva, Hanuman, Gayatri)..." class="w-full pl-10 pr-4 py-2.5 rounded-full bg-maroon-card/90 border border-gold/40 text-ivory placeholder-gray-400 text-xs focus:outline-none focus:border-gold">
+            <i class="fas fa-search absolute left-3.5 top-3 text-gold/60 text-xs"></i>
+        </div>
+        <select id="libraryFilter" onchange="filterMediaGrid()" class="px-4 py-2.5 rounded-full bg-maroon-card border border-gold/40 text-ivory text-xs focus:outline-none focus:border-gold">
+            <option value="all">All library items</option>
+            <option value="favorites">Saved favorites</option>
+            <option value="recent">Recently played</option>
+        </select>
+        <select id="sortSelect" onchange="filterMediaGrid()" class="px-4 py-2.5 rounded-full bg-maroon-card border border-gold/40 text-ivory text-xs focus:outline-none focus:border-gold">
+            <option value="newest">Sort: Newest</option>
+            <option value="title">Sort: Title</option>
+            <option value="category">Sort: Category</option>
+        </select>
+        </div>
+
+        <!-- Dynamic Media Grid -->
+        <div id="mediaGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Dynamically Populated via JavaScript -->
+        </div>
+    </section>
+
+        <section id="audio-sanctuary" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 border border-gold/40 relative overflow-hidden shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="flex items-center justify-between flex-wrap gap-2">
+                            <div class="flex items-center space-x-2 text-saffron text-xs font-semibold uppercase tracking-widest">
+                                <i class="fas fa-music"></i>
+                                <span>Chant Sanctuary & 108 Mala Japa</span>
+                            </div>
+
+                            <!-- 108 Mala Counters & Cycles -->
+                            <div class="flex items-center space-x-3 bg-gold/10 px-3 py-1.5 rounded-full border border-gold/30">
+                                <div class="text-xs">
+                                    <span class="text-gray-300">Bead:</span>
+                                    <span id="malaCounter" class="font-bold text-gold font-mono ml-1">0 / 108</span>
+                                </div>
+                                <div class="h-3 w-px bg-gold/30"></div>
+                                <div class="text-xs">
+                                    <span class="text-gray-300">Completed Malas:</span>
+                                    <span id="malaCycleCounter" class="font-bold text-saffron font-mono ml-1">0</span>
+                                </div>
+                                <button onclick="resetMalaCount()" class="text-[10px] text-gold/70 hover:text-gold ml-1" title="Reset Counter"><i class="fas fa-rotate"></i></button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 id="currentTrackTitle" class="text-2xl sm:text-3xl font-bold heading-serif text-gold">Gayatri Mantra (108 Times Chanting)</h3>
+                            <p id="currentTrackArtist" class="text-gray-300 text-sm mt-1">Surya / Savitr • Indian Bhakti Dhara Audio</p>
+                        </div>
+
+                        <!-- Equalizer Animation Bars -->
+                        <div class="flex items-end space-x-1.5 h-10 py-1" id="visualizer">
+                            <div class="w-1.5 bg-gold/40 rounded-t bar-anim" style="animation-delay: 0.1s"></div>
+                            <div class="w-1.5 bg-saffron rounded-t bar-anim" style="animation-delay: 0.4s"></div>
+                            <div class="w-1.5 bg-gold rounded-t bar-anim" style="animation-delay: 0.25s"></div>
+                            <div class="w-1.5 bg-saffron-light rounded-t bar-anim" style="animation-delay: 0.55s"></div>
+                            <div class="w-1.5 bg-gold/70 rounded-t bar-anim" style="animation-delay: 0.3s"></div>
+                            <div class="w-1.5 bg-saffron rounded-t bar-anim" style="animation-delay: 0.45s"></div>
+                            <div class="w-1.5 bg-gold rounded-t bar-anim" style="animation-delay: 0.2s"></div>
+                        </div>
+
+                        <!-- Audio Playback Controls & Interactive Bead Button -->
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                            <div class="flex items-center space-x-4">
+                                <button onclick="prevTrack()" class="p-3 text-gold/70 hover:text-gold transition-colors text-lg" title="Previous Track">
+                                    <i class="fas fa-step-backward"></i>
+                                </button>
+                                <button id="mainPlayBtn" onclick="toggleAudioPlay()" class="w-14 h-14 rounded-full bg-gradient-to-tr from-saffron to-gold text-maroon-deep flex items-center justify-center text-xl shadow-lg shadow-saffron/30 hover:scale-105 transition-all">
+                                    <i id="playIcon" class="fas fa-play ml-1"></i>
+                                </button>
+                                <button onclick="nextTrack()" class="p-3 text-gold/70 hover:text-gold transition-colors text-lg" title="Next Track">
+                                    <i class="fas fa-step-forward"></i>
+                                </button>
+                            </div>
+
+                            <!-- Interactive Bead Tap Button -->
+                            <button onclick="incrementMalaBead()" class="px-5 py-3 rounded-full bg-gradient-to-r from-saffron to-gold hover:from-saffron-dark hover:to-gold-dark text-maroon-deep text-xs sm:text-sm font-bold shadow-lg shadow-saffron/20 hover:scale-105 transition-all flex items-center space-x-2">
+                                <i class="fas fa-dharmachakra text-base"></i>
+                                <span>Tap Bead (+1 Japa)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Playlist Selection Grid -->
+                    <div class="lg:col-span-5 border-t lg:border-t-0 lg:border-l border-gold/20 pt-6 lg:pt-0 lg:pl-8">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-saffron mb-4 flex items-center justify-between">
+                            <span>Chant Recordings</span>
+                            <span class="text-xs text-gray-400 font-normal">Audio Playlist</span>
+                        </h4>
+
+                        <div id="playlistContainer" class="space-y-2.5 max-h-72 overflow-y-auto pr-2">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="social-engine" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gold/15">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="px-3 py-1 rounded-full bg-saffron/15 text-saffron text-xs font-semibold tracking-widest uppercase border border-saffron/30">Official Ecosystem</span>
+                <h2 class="text-3xl sm:text-4xl font-bold heading-serif text-gold-gradient mt-3 mb-3">11 IBD Platform Network Hub</h2>
+                <p class="text-gray-300 font-light text-sm">Connect with Indian Bhakti Dhara across all 11 official channels and social media profiles.</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <!-- 11 Platforms Dynamic Interactive Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+
+                <!-- 1. YouTube -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-red-600/20 text-red-500 border border-red-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-red-950/80 text-red-300 text-[10px] font-bold uppercase tracking-wider border border-red-500/30">Video Channel</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">YouTube</h3>
+                        <p class="text-gray-400 text-xs mt-1">HD Bhajans, Aarti collections & 4K Stotrams.</p>
+                    </div>
+                    <a href="https://youtube.com/@indianbhaktidhara?si=damzIAmIa5rWUJkX" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all">
+                        <span>Visit Channel</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 2. Instagram -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-pink-600/20 text-pink-400 border border-pink-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-pink-950/80 text-pink-300 text-[10px] font-bold uppercase tracking-wider border border-pink-500/30">Reels & Quotes</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Instagram</h3>
+                        <p class="text-gray-400 text-xs mt-1">Daily Sloka Reels, Darshan Stories & Spiritual Posts.</p>
+                    </div>
+                    <a href="https://www.instagram.com/indianbhaktidhara" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all">
+                        <span>Follow Instagram</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 3. Facebook -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 border border-blue-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-blue-950/80 text-blue-300 text-[10px] font-bold uppercase tracking-wider border border-blue-500/30">Community</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Facebook</h3>
+                        <p class="text-gray-400 text-xs mt-1">Devotional community, Katha & event updates.</p>
+                    </div>
+                    <a href="https://www.facebook.com/share/1CoXdpRr1S/" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all">
+                        <span>Join Page</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 4. Threads -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-gray-600/20 text-gray-200 border border-gray-400/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fab fa-threads"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-gray-800/80 text-gray-300 text-[10px] font-bold uppercase tracking-wider border border-gray-500/30">Vedic Thoughts</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Threads</h3>
+                        <p class="text-gray-400 text-xs mt-1">Short Wisdom Bites, Mantras & Daily Reflections.</p>
+                    </div>
+                    <a href="https://www.threads.com/@indianbhaktidhara" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-600 hover:to-gray-800 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all border border-gray-500/30">
+                        <span>Follow Threads</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 5. Telegram -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-sky-600/20 text-sky-400 border border-sky-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fab fa-telegram-plane"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-sky-950/80 text-sky-300 text-[10px] font-bold uppercase tracking-wider border border-sky-500/30">Broadcasting</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Telegram</h3>
+                        <p class="text-gray-400 text-xs mt-1">Daily MP3 Chants, High-Res Wallpapers & PDF Kathas.</p>
+                    </div>
+                    <a href="https://t.me/indianbhaktidhara" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all">
+                        <span>Join Sangha</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 6. Dailymotion -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-slate-600/20 text-slate-200 border border-slate-400/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fas fa-circle-play"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-slate-900/80 text-slate-300 text-[10px] font-bold uppercase tracking-wider border border-slate-500/30">Video Library</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Dailymotion</h3>
+                        <p class="text-gray-400 text-xs mt-1">Full Length Devotional Documentaries & Series.</p>
+                    </div>
+                    <a href="https://dailymotion.com/indianbhaktidhara" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all border border-slate-500/30">
+                        <span>Watch Videos</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 7. Google Sites -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-amber-600/20 text-amber-400 border border-amber-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-amber-950/80 text-amber-300 text-[10px] font-bold uppercase tracking-wider border border-amber-500/30">Official Portal</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Google Sites</h3>
+                        <p class="text-gray-400 text-xs mt-1">Official Archival Knowledge Base & Vedic Texts.</p>
+                    </div>
+                    <a href="https://sites.google.com" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-500 hover:to-yellow-500 text-maroon-deep font-bold text-xs text-center flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Portal</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 8. ShareChat -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-600/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/30">Desi Regional</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">ShareChat</h3>
+                        <p class="text-gray-400 text-xs mt-1">Hindi & Regional Language Bhakti Status Updates.</p>
+                    </div>
+                    <a href="https://sharechat.com/profile/indianbhaktidhara?d=n" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all">
+                        <span>Open ShareChat</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 9. Moj -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-orange-600/20 text-orange-400 border border-orange-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fas fa-mobile-screen-button"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-orange-950/80 text-orange-300 text-[10px] font-bold uppercase tracking-wider border border-orange-500/30">Short Video</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Moj</h3>
+                        <p class="text-gray-400 text-xs mt-1">Trending Short Aarti Clips & Festive Highlights.</p>
+                    </div>
+                    <a href="https://mojapp.in/@indianbhaktidhara" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-orange-600 to-saffron-dark hover:from-orange-500 hover:to-saffron text-maroon-deep font-bold text-xs text-center flex items-center justify-center space-x-2 transition-all">
+                        <span>Watch Moj Shorts</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 10. Pinterest -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-rose-600/20 text-rose-400 border border-rose-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fab fa-pinterest-p"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-rose-950/80 text-rose-300 text-[10px] font-bold uppercase tracking-wider border border-rose-500/30">Visual Gallery</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Pinterest</h3>
+                        <p class="text-gray-400 text-xs mt-1">Sacred HD Art, Temple Photography & Quote Pins.</p>
+                    </div>
+                    <a href="https://pin.it/5iQtBc5Af" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all">
+                        <span>View Pins</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 11. LinkedIn -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-600/20 text-cyan-400 border border-cyan-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <span class="px-2.5 py-0.5 rounded-full bg-cyan-950/80 text-cyan-300 text-[10px] font-bold uppercase tracking-wider border border-cyan-500/30">Network</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">LinkedIn</h3>
+                        <p class="text-gray-400 text-xs mt-1">Platform Network Announcements & Vedic Leadership.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/indianbhaktidhara" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-500 hover:to-blue-600 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all">
+                        <span>Connect LinkedIn</span>
+                        <i class="fas fa-external-link-alt text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 12. WhatsApp -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between"><div class="w-12 h-12 rounded-xl bg-green-600/20 text-green-400 border border-green-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"><i class="fab fa-whatsapp"></i></div><span class="px-2.5 py-0.5 rounded-full bg-green-950/80 text-green-300 text-[10px] font-bold uppercase tracking-wider border border-green-500/30">Channel</span></div>
+                    <div class="mt-4"><h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">WhatsApp</h3><p class="text-gray-400 text-xs mt-1">Private devotional updates, reminders and new releases.</p></div>
+                    <a href="https://whatsapp.com/channel/0029Vb5YARhLNSaE4zCscQ38" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all"><span>Join Channel</span><i class="fas fa-external-link-alt text-[10px]"></i></a>
+                </div>
+
+                <!-- 13. Reddit -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between"><div class="w-12 h-12 rounded-xl bg-orange-600/20 text-orange-400 border border-orange-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"><i class="fab fa-reddit-alien"></i></div><span class="px-2.5 py-0.5 rounded-full bg-orange-950/80 text-orange-300 text-[10px] font-bold uppercase tracking-wider border border-orange-500/30">Community</span></div>
+                    <div class="mt-4"><h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Reddit</h3><p class="text-gray-400 text-xs mt-1">Join conversations around Sanatan wisdom and practice.</p></div>
+                    <a href="https://www.reddit.com/user/Indian_Bhakti_Dhara/" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all"><span>Visit Profile</span><i class="fas fa-external-link-alt text-[10px]"></i></a>
+                </div>
+
+                <!-- 14. Substack -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between"><div class="w-12 h-12 rounded-xl bg-amber-600/20 text-amber-400 border border-amber-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"><i class="fas fa-envelope-open-text"></i></div><span class="px-2.5 py-0.5 rounded-full bg-amber-950/80 text-amber-300 text-[10px] font-bold uppercase tracking-wider border border-amber-500/30">Newsletter</span></div>
+                    <div class="mt-4"><h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Substack</h3><p class="text-gray-400 text-xs mt-1">Long-form reflections, scripture notes and guidance.</p></div>
+                    <a href="https://substack.com/@indianbhaktidhara" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-500 hover:to-yellow-500 text-maroon-deep font-bold text-xs text-center flex items-center justify-center space-x-2 transition-all"><span>Read Newsletter</span><i class="fas fa-external-link-alt text-[10px]"></i></a>
+                </div>
+
+                <!-- 15. Daily Hunt -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-gold/20 flex flex-col justify-between group">
+                    <div class="flex items-start justify-between"><div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 border border-blue-500/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"><i class="fas fa-newspaper"></i></div><span class="px-2.5 py-0.5 rounded-full bg-blue-950/80 text-blue-300 text-[10px] font-bold uppercase tracking-wider border border-blue-500/30">Daily Reads</span></div>
+                    <div class="mt-4"><h3 class="font-bold text-gold text-lg group-hover:text-saffron transition-colors">Daily Hunt</h3><p class="text-gray-400 text-xs mt-1">Discover devotional stories and regional spiritual content.</p></div>
+                    <a href="https://profile.dailyhunt.in/indianbhaktidhara" target="_blank" rel="noopener" class="mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold text-xs text-center flex items-center justify-center space-x-2 transition-all"><span>Open Profile</span><i class="fas fa-external-link-alt text-[10px]"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="panchang" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gold/15">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Daily Panchang Widget -->
+                <div class="lg:col-span-5 glass-card rounded-3xl p-6 border border-gold/30">
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-gold/20">
+                        <div>
+                            <span class="text-xs text-saffron font-semibold uppercase tracking-wider">Auspicious Timings</span>
+                            <h3 class="text-2xl font-bold heading-serif text-gold">Daily Vedic Panchang</h3>
+                        </div>
+                        <div class="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center text-gold border border-gold/30">
+                            <i class="fas fa-sun text-xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between items-center py-2 border-b border-gold/10">
+                            <span class="text-gray-300"><i class="fas fa-calendar-day text-saffron mr-2"></i>Today's Date:</span>
+                            <span id="panchangDate" class="font-semibold text-gold">Loading...</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gold/10">
+                            <span class="text-gray-300"><i class="fas fa-moon text-saffron mr-2"></i>Tithi (Lunar Phase):</span>
+                            <span class="font-semibold text-ivory">Shukla Paksha Ekadashi</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gold/10">
+                            <span class="text-gray-300"><i class="fas fa-star text-saffron mr-2"></i>Nakshatra:</span>
+                            <span class="font-semibold text-ivory">Rohini Nakshatra</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2">
+                            <span class="text-gray-300"><i class="fas fa-clock text-saffron mr-2"></i>Abhijit Muhurat:</span>
+                            <span class="font-semibold text-emerald-400">11:54 AM - 12:42 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sloka Generator Widget -->
+                <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 border border-gold/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-saffron/15 text-saffron text-xs font-semibold tracking-widest uppercase border border-saffron/30">Vedic Mantra of the Day</span>
+                            <button onclick="generateNextSloka()" class="px-3 py-1 rounded-full bg-gold/10 hover:bg-gold/20 text-gold text-xs font-semibold border border-gold/30 flex items-center space-x-1 transition-all">
+                                <i class="fas fa-rotate text-[10px]"></i>
+                                <span>Next Mantra</span>
+                            </button>
+                        </div>
+
+                        <div class="my-6 p-6 rounded-2xl bg-maroon-deep/80 border border-gold/20 text-center space-y-3">
+                            <p id="slokaSanskrit" class="text-xl sm:text-2xl font-bold heading-rozha text-gold leading-relaxed">"कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।"</p>
+                            <p id="slokaHindi" class="text-sm text-saffron-light italic font-serif">"आपको केवल कर्म करने का अधिकार है, उसके फलों पर कभी नहीं।"</p>
+                            <p id="slokaEnglish" class="text-xs text-gray-300 font-light">"You have a right to perform your prescribed duty, but you are not entitled to the fruits of action."</p>
+                            <p id="slokaSource" class="text-[11px] text-gold/70 font-mono tracking-wider pt-2">— Bhagavad Gita (2.47)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-end space-x-3 pt-2">
+                        <button onclick="copySlokaText()" class="px-4 py-2 rounded-xl bg-gold/10 border border-gold/30 hover:border-gold text-gold text-xs font-semibold flex items-center space-x-2 transition-all">
+                            <i class="fas fa-copy"></i>
+                            <span>Copy Sloka</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="festivals" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gold/15">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="px-3 py-1 rounded-full bg-saffron/15 text-saffron text-xs font-semibold tracking-widest uppercase border border-saffron/30">Sanatan Parv</span>
+                <h2 class="text-3xl font-bold heading-serif text-gold-gradient mt-2">Upcoming Sacred Festivals</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl border border-gold/30 text-center space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-saffron/20 text-saffron mx-auto flex items-center justify-center text-xl border border-saffron/40">
+                        <i class="fas fa-[#FFD700] fa-om"></i>
+                    </div>
+                    <h3 class="font-bold text-gold text-lg">Maha Shivratri</h3>
+                    <p class="text-xs text-saffron-light font-mono">February / March</p>
+                    <p class="text-xs text-gray-300">Night long chanting of Om Namah Shivaya & Mahamrityunjaya Stotram.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-gold/30 text-center space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-saffron/20 text-saffron mx-auto flex items-center justify-center text-xl border border-saffron/40">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3 class="font-bold text-gold text-lg">Shri Rama Navami</h3>
+                    <p class="text-xs text-saffron-light font-mono">March / April</p>
+                    <p class="text-xs text-gray-300">Celebration of Lord Ram's birth with Ram Charit Manas Kathas.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-gold/30 text-center space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-saffron/20 text-saffron mx-auto flex items-center justify-center text-xl border border-saffron/40">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h3 class="font-bold text-gold text-lg">Shri Krishna Janmashtami</h3>
+                    <p class="text-xs text-saffron-light font-mono">August / September</p>
+                    <p class="text-xs text-gray-300">Midnight Aarti, Bhagavad Gita recitations and Devotional Kirtan.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="addMediaModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-lg rounded-3xl border border-gold/50 shadow-2xl overflow-hidden flex flex-col">
+            <div class="p-5 border-b border-gold/20 flex items-center justify-between bg-maroon-deep/95">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-full bg-saffron/20 text-gold flex items-center justify-center border border-gold/40">
+                        <i class="fas fa-circle-plus"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold heading-serif text-gold">Add Devotional Content</h3>
+                        <p class="text-xs text-gray-300">Import directly via YT Studio URL or YouTube link</p>
+                    </div>
+                </div>
+                <button onclick="closeAddMediaModal()" class="text-gray-400 hover:text-gold p-1.5">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+
+            <form onsubmit="handleFormSubmit(event)" class="p-6 space-y-4 text-xs">
+                <div>
+                    <label class="block text-gold font-semibold mb-1.5">Select Content Format *</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="flex items-center space-x-2 p-3 rounded-xl border border-gold/30 bg-maroon-card cursor-pointer hover:border-gold">
+                            <input type="radio" name="mediaType" value="video" checked class="accent-saffron" onchange="updateFormPreview()">
+                            <span class="font-bold text-ivory"><i class="fas fa-video text-saffron mr-1"></i> Long Video (16:9)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 p-3 rounded-xl border border-gold/30 bg-maroon-card cursor-pointer hover:border-gold">
+                            <input type="radio" name="mediaType" value="short" class="accent-saffron" onchange="updateFormPreview()">
+                            <span class="font-bold text-ivory"><i class="fas fa-mobile-screen-button text-saffron mr-1"></i> Sacred Short (9:16)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-gold font-semibold mb-1">Title *</label>
+                    <input type="text" id="inputTitle" required placeholder="e.g., Mahamrityunjaya Mantra 108 Times" class="w-full px-3.5 py-2.5 rounded-xl bg-maroon-deep border border-gold/30 text-ivory focus:outline-none focus:border-gold">
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <label class="block text-gold font-semibold">YouTube / YT Studio URL or Video ID *</label>
+                        <span class="text-[10px] text-saffron-light"><i class="fab fa-youtube mr-1"></i>YT Studio Supported</span>
+                    </div>
+                    <input type="text" id="inputUrl" required oninput="updateFormPreview()" placeholder="Paste link: studio.youtube.com/video/..., youtube.com/shorts/..., watch?v=..." class="w-full px-3.5 py-2.5 rounded-xl bg-maroon-deep border border-gold/30 text-ivory focus:outline-none focus:border-gold font-mono text-[11px]">
+                    <p class="text-[10px] text-gray-400 mt-1">Accepts standard YouTube URLs, YT Studio editor links, Shorts URLs, or direct 11-char Video IDs.</p>
+                </div>
+
+                <!-- YT Preview Box -->
+                <div id="ytPreviewContainer" class="hidden p-3 rounded-xl bg-black/60 border border-gold/20 flex items-center space-x-3">
+                    <img id="ytPreviewThumb" src="" alt="Thumbnail Preview" class="w-16 h-12 object-cover rounded border border-gold/30">
+                    <div class="truncate text-[11px]">
+                        <p class="text-gold font-semibold flex items-center"><i class="fas fa-check-circle text-emerald-400 mr-1"></i> Valid Video ID Detected</p>
+                        <p id="ytPreviewId" class="text-gray-300 font-mono text-[10px]">ID: --------</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-gold font-semibold mb-1">Category *</label>
+                        <select id="inputCategory" class="w-full px-3 py-2.5 rounded-xl bg-maroon-deep border border-gold/30 text-ivory focus:outline-none focus:border-gold">
+                            <option value="Aarti & Stotra">Aarti & Stotra</option>
+                            <option value="Bhakti Sangeet">Bhakti Sangeet</option>
+                            <option value="Daily Mantras">Daily Mantras</option>
+                            <option value="Katha & Pravachan">Katha & Pravachan</option>
+                            <option value="Festival Special">Festival Special</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-gold font-semibold mb-1">Duration / Tag</label>
+                        <input type="text" id="inputTag" placeholder="e.g. Lord Shiva • 15:30" class="w-full px-3.5 py-2.5 rounded-xl bg-maroon-deep border border-gold/30 text-ivory focus:outline-none focus:border-gold">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-gold font-semibold mb-1">Custom Thumbnail URL (Optional)</label>
+                    <input type="url" id="inputThumb" placeholder="Leave blank to auto-fetch official YouTube thumbnail" class="w-full px-3.5 py-2.5 rounded-xl bg-maroon-deep border border-gold/30 text-ivory focus:outline-none focus:border-gold">
+                </div>
+
+                <div class="pt-3 flex justify-end space-x-3 border-t border-gold/20">
+                    <button type="button" onclick="closeAddMediaModal()" class="px-4 py-2 rounded-full border border-gold/30 text-gray-300 font-semibold hover:bg-gold/10">Cancel</button>
+                    <button type="submit" class="px-6 py-2 rounded-full bg-gradient-to-r from-saffron to-gold text-maroon-deep font-bold shadow-md hover:scale-105 transition-all">
+                        Publish Content
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="playerModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div id="playerCardContainer" class="glass-card w-full max-w-4xl rounded-3xl border border-gold/50 shadow-2xl overflow-hidden flex flex-col">
+            <div class="p-4 border-b border-gold/20 flex items-center justify-between bg-maroon-deep/95">
+                <div class="flex items-center space-x-2">
+                    <span id="playerBadge" class="px-2.5 py-0.5 rounded-full bg-saffron text-maroon-deep font-bold text-[10px] uppercase">Video</span>
+                    <h3 id="playerModalTitle" class="text-sm sm:text-base font-bold heading-serif text-gold truncate max-w-xs sm:max-w-md">Devotional Title</h3>
+                </div>
+                <button onclick="closePlayerModal()" class="text-gray-400 hover:text-gold p-1.5">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <div class="p-3 bg-black flex justify-center items-center">
+                <div id="aspectWrapper" class="w-full aspect-video rounded-xl overflow-hidden border border-gold/30 bg-black">
+                    <iframe id="modalIframe" class="w-full h-full" src="" title="Devotional Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="p-4 bg-maroon-deep/95 flex items-center justify-between text-xs border-t border-gold/20">
+                <span id="playerTag" class="text-gray-300">Indian Bhakti Dhara Devotional Library</span>
+                <button onclick="closePlayerModal()" class="px-4 py-1.5 rounded-full bg-gold/20 text-gold border border-gold/40 hover:bg-gold/30 font-semibold">
+                    Close Player
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="githubModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-3xl rounded-3xl border border-gold/50 shadow-2xl max-h-[90vh] flex flex-col overflow-hidden">
+            <div class="p-6 border-b border-gold/20 flex items-center justify-between bg-maroon-deep/95">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold border border-gold/40">
+                        <i class="fab fa-github text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold heading-serif text-gold">GitHub Import & Deployment Guide</h3>
+                        <p class="text-xs text-gray-300">Publish 'Indian Bhakti Dhara' on GitHub Pages for Free</p>
+                    </div>
+                </div>
+                <button onclick="closeGithubModal()" class="text-gray-400 hover:text-gold p-2">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-4 text-xs sm:text-sm">
+                <div class="p-4 rounded-xl bg-maroon-card border border-gold/20 space-y-1">
+                    <p class="text-gold font-bold">Step 1: Save `index.html`</p>
+                    <p class="text-gray-300 text-xs">Copy this entire document code and save it locally as <code class="text-saffron">index.html</code> in your project root.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-maroon-card border border-gold/20 space-y-1">
+                    <p class="text-gold font-bold">Step 2: Initialize Git & Push to GitHub</p>
+                    <p class="text-gray-300 text-xs">Run these commands in your project terminal:</p>
+                    <div class="p-3 bg-black/80 rounded-lg text-saffron-light font-mono text-xs overflow-x-auto space-y-1 mt-2">
+                        <p>git init</p>
+                        <p>git add index.html</p>
+                        <p>git commit -m "Initial release of Indian Bhakti Dhara Portal"</p>
+                        <p>git branch -M main</p>
+                        <p>git remote add origin https://github.com/YOUR_USERNAME/indian-bhakti-dhara.git</p>
+                        <p>git push -u origin main</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-maroon-card border border-gold/20 space-y-1">
+                    <p class="text-gold font-bold">Step 3: Enable Free Hosting via GitHub Pages</p>
+                    <p class="text-gray-300 text-xs">Go to your GitHub repo <strong>Settings &rarr; Pages &rarr; Source</strong>, choose <strong>main branch / root</strong> and click <strong>Save</strong>.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-maroon-card border border-gold/20 space-y-1">
+                    <p class="text-gold font-bold">Step 4: Website URL Ready!</p>
+                    <p class="text-gray-300 text-xs">Your devotional website will be available at: <br><code class="text-gold font-mono">https://YOUR_USERNAME.github.io/indian-bhakti-dhara/</code></p>
+                </div>
+            </div>
+            <div class="p-4 border-t border-gold/20 bg-maroon-deep/95 flex justify-end">
+                <button onclick="closeGithubModal()" class="px-5 py-2 rounded-full bg-gold text-maroon-deep font-bold text-xs">Close Deployment Guide</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-maroon-deep border-t border-gold/20 py-8 px-4 text-center text-xs text-gray-400 relative z-10">
+        <div class="max-w-7xl mx-auto space-y-2">
+            <p>© 2026 Indian Bhakti Dhara (IBD) • Devotional Media & 108 Mala Hub</p>
+            <p class="text-[11px] text-gray-500">Official Channel Platform Network • Optimized for GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 pointer-events-none px-5 py-3 rounded-2xl bg-gold text-maroon-deep font-bold text-xs shadow-2xl flex items-center space-x-2 border border-saffron">
+        <i class="fas fa-check-circle text-base"></i>
+        <span id="toastMsg">Action completed!</span>
+    </div>
+
+    <audio id="mainAudio" preload="none"></audio>
+
+    <script>
+        const initialMediaStore = [
+            {
+                id: 'v1',
+                type: 'video',
+                title: 'Mahamrityunjaya Mantra - 108 Times Chanting',
+                category: 'Daily Mantras',
+                tag: 'Lord Shiva • 21:10',
+                thumb: 'https://img.youtube.com/vi/PL386A2E4B17B8097F/hqdefault.jpg',
+                embedUrl: ''
+            },
+            {
+                id: 's1',
+                type: 'short',
+                title: 'Sacred Badrinath Temple Morning Darshan Reel',
+                category: 'Aarti & Stotra',
+                tag: 'Short Reel • Lord Vishnu',
+                thumb: 'https://images.unsplash.com/photo-1620052581237-5d36667be337?auto=format&fit=crop&w=600&q=80',
+                embedUrl: ''
+            },
+            {
+                id: 'v2',
+                type: 'video',
+                title: 'Achyutam Keshavam Krishna Damodaram Bhajan',
+                category: 'Bhakti Sangeet',
+                tag: 'Shri Krishna • 08:15',
+                thumb: 'https://images.unsplash.com/photo-1545232979-fbf34f5ce757?auto=format&fit=crop&w=600&q=80',
+                embedUrl: ''
+            },
+            {
+                id: 's2',
+                type: 'short',
+                title: 'Quick 30-Sec Gayatri Mantra Chant Short',
+                category: 'Daily Mantras',
+                tag: 'Vedic Short • Savitr',
+                thumb: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=600&q=80',
+                embedUrl: ''
+            }
+        ];
+
+        const audioPlaylist = [
+            { title: "Gayatri Mantra (108 Times Chanting)", god: "Surya / Savitr", src: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=meditation-om-chant-112776.mp3" },
+            { title: "Shiva Dhun Om Namah Shivaya", god: "Lord Shiva", src: "https://cdn.pixabay.com/download/audio/2021/08/09/audio_8843236315.mp3?filename=om-shanti-ambient-11200.mp3" },
+            { title: "Peaceful Krishna Flute Meditation", god: "Lord Krishna", src: "https://cdn.pixabay.com/download/audio/2022/03/24/audio_345f1b1b3b.mp3?filename=indian-flute-meditation-109265.mp3" }
+        ];
+
+        const slokasCollection = [
+            { sanskrit: "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।", hindi: "आपको केवल कर्म करने का अधिकार है, उसके फलों पर कभी नहीं।", english: "You have a right to perform your prescribed duty, but you are not entitled to the fruits of action.", source: "— Bhagavad Gita (2.47)" },
+            { sanskrit: "यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।", hindi: "जब-जब धर्म की हानि होती है, तब-तब मैं अवतार लेता हूँ।", english: "Whenever there is a decline in righteousness, O Bharata, I manifest Myself.", source: "— Bhagavad Gita (4.7)" },
+            { sanskrit: "सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज।", hindi: "सब धर्मों को छोड़कर केवल मेरी शरण में आओ।", english: "Abandon all varieties of religion and just surrender unto Me.", source: "— Bhagavad Gita (18.66)" }
+        ];
+
+        let mediaStore = [];
+        let currentTypeFilter = 'all';
+        let currentAudioIndex = 0;
+        let isAudioPlaying = false;
+        let malaCount = 0;
+        let malaCycles = 0;
+        let slokaIndex = 0;
+        let favoriteIds = new Set();
+        let recentIds = [];
+
+        const mainAudio = document.getElementById('mainAudio');
+
+        function loadLibraryPreferences() {
+            try {
+                favoriteIds = new Set(JSON.parse(localStorage.getItem('ibd_favorites') || '[]'));
+                recentIds = JSON.parse(localStorage.getItem('ibd_recent') || '[]');
+            } catch (error) {
+                favoriteIds = new Set();
+                recentIds = [];
+            }
+        }
+
+        function saveLibraryPreferences() {
+            localStorage.setItem('ibd_favorites', JSON.stringify([...favoriteIds]));
+            localStorage.setItem('ibd_recent', JSON.stringify(recentIds.slice(0, 12)));
+        }
+
+        /**
+         * Parses any YouTube URL (YT Studio, Shorts, Standard, or raw Video ID)
+         * and extracts the 11-character video ID.
+         */
+        function extractYouTubeVideoId(input) {
+            if (!input) return null;
+            const str = input.trim();
+
+            // Direct 11-character YouTube video ID
+            if (/^[a-zA-Z0-9_-]{11}$/.test(str)) {
+                return str;
+            }
+
+            // YT Studio Link (e.g., studio.youtube.com/video/VIDEO_ID/edit)
+            if (str.includes('studio.youtube.com/video/')) {
+                const parts = str.split('studio.youtube.com/video/');
+                if (parts[1]) {
+                    const videoId = parts[1].split('/')[0].split('?')[0];
+                    if (videoId.length === 11) return videoId;
+                }
+            }
+
+            // YouTube Shorts Link (e.g., youtube.com/shorts/VIDEO_ID)
+            if (str.includes('/shorts/')) {
+                const parts = str.split('/shorts/');
+                if (parts[1]) {
+                    const videoId = parts[1].split('?')[0].split('&')[0].split('/')[0];
+                    if (videoId.length === 11) return videoId;
+                }
+            }
+
+            // Standard YouTube watch link (youtube.com/watch?v=VIDEO_ID)
+            if (str.includes('watch?v=')) {
+                const parts = str.split('watch?v=');
+                if (parts[1]) {
+                    const videoId = parts[1].split('&')[0].split('#')[0];
+                    if (videoId.length === 11) return videoId;
+                }
+            }
+
+            // Shortened YouTube URL (youtu.be/VIDEO_ID)
+            if (str.includes('youtu.be/')) {
+                const parts = str.split('youtu.be/');
+                if (parts[1]) {
+                    const videoId = parts[1].split('?')[0].split('#')[0];
+                    if (videoId.length === 11) return videoId;
+                }
+            }
+
+            // Embedded Link (youtube.com/embed/VIDEO_ID)
+            if (str.includes('/embed/')) {
+                const parts = str.split('/embed/');
+                if (parts[1]) {
+                    const videoId = parts[1].split('?')[0].split('#')[0];
+                    if (videoId.length === 11) return videoId;
+                }
+            }
+
+            return null;
+        }
+
+        function updateFormPreview() {
+            const inputVal = document.getElementById('inputUrl').value;
+            const videoId = extractYouTubeVideoId(inputVal);
+            const previewContainer = document.getElementById('ytPreviewContainer');
+            const previewThumb = document.getElementById('ytPreviewThumb');
+            const previewId = document.getElementById('ytPreviewId');
+
+            if (videoId) {
+                previewThumb.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                previewId.innerText = `Extracted Video ID: ${videoId}`;
+                previewContainer.classList.remove('hidden');
+            } else {
+                previewContainer.classList.add('hidden');
+            }
+        }
+
+        function initMediaStore() {
+            const saved = localStorage.getItem('ibd_media_store');
+            if (saved) {
+                try {
+                    mediaStore = JSON.parse(saved).map(item => item.embedUrl && item.embedUrl.includes('list=') ? { ...item, embedUrl: '' } : item);
+                    localStorage.setItem('ibd_media_store', JSON.stringify(mediaStore));
+                } catch(e) { mediaStore = [...initialMediaStore]; }
+            } else {
+                mediaStore = [...initialMediaStore];
+                saveMediaStore();
+            }
+            updateCounts();
+            renderMediaGrid();
+        }
+
+        function saveMediaStore() {
+            localStorage.setItem('ibd_media_store', JSON.stringify(mediaStore));
+            updateCounts();
+        }
+
+        function resetToDefaultMedia() {
+            mediaStore = [...initialMediaStore];
+            saveMediaStore();
+            filterMediaGrid();
+            showToast('Media Grid Reset to Default Collection');
+        }
+
+        function updateCounts() {
+            document.getElementById('count-all').innerText = mediaStore.length;
+            document.getElementById('count-video').innerText = mediaStore.filter(i => i.type === 'video').length;
+            document.getElementById('count-short').innerText = mediaStore.filter(i => i.type === 'short').length;
+            document.getElementById('heroMediaCount').innerText = mediaStore.length;
+            document.getElementById('heroFavoriteCount').innerText = favoriteIds.size;
+        }
+
+        function setMediaTypeFilter(type) {
+            currentTypeFilter = type;
+            document.querySelectorAll('.media-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-gold', 'text-maroon-deep');
+                btn.classList.add('glass-card', 'text-ivory');
+            });
+
+            const activeBtn = document.getElementById(`tab-${type}`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-gold', 'text-maroon-deep');
+                activeBtn.classList.remove('glass-card', 'text-ivory');
+            }
+
+            filterMediaGrid();
+        }
+
+        function filterMediaGrid() {
+            const search = document.getElementById('mediaSearchInput').value.toLowerCase();
+            const cat = document.getElementById('categorySelect').value;
+            const library = document.getElementById('libraryFilter').value;
+            const sort = document.getElementById('sortSelect').value;
+
+            const filtered = mediaStore.filter(item => {
+                const matchType = (currentTypeFilter === 'all') || (item.type === currentTypeFilter);
+                const matchCat = (cat === 'all') || (item.category === cat);
+                const matchSearch = item.title.toLowerCase().includes(search) || item.tag.toLowerCase().includes(search);
+                const matchLibrary = library === 'all' || (library === 'favorites' && favoriteIds.has(item.id)) || (library === 'recent' && recentIds.includes(item.id));
+                return matchType && matchCat && matchSearch && matchLibrary;
+            });
+
+            filtered.sort((a, b) => sort === 'title' ? a.title.localeCompare(b.title) : sort === 'category' ? a.category.localeCompare(b.category) : mediaStore.indexOf(a) - mediaStore.indexOf(b));
+
+            renderMediaGrid(filtered);
+        }
+
+        function renderMediaGrid(items = null) {
+            const grid = document.getElementById('mediaGrid');
+            grid.innerHTML = '';
+            const list = items || mediaStore;
+
+            if (list.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-gray-400">
+                        <i class="fas fa-film text-3xl mb-2 text-gold/50"></i>
+                        <p>No videos or shorts found. Click "+ Add Video/Short" to publish!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            list.forEach(item => {
+                const card = document.createElement('div');
+                const isShort = item.type === 'short';
+
+                card.className = "glass-card glass-card-hover rounded-2xl overflow-hidden border border-gold/20 flex flex-col justify-between group";
+                card.innerHTML = `
+                    <div>
+                        <div class="relative ${isShort ? 'aspect-[9/16] max-h-72 mx-auto' : 'aspect-video'} overflow-hidden bg-black">
+                            <img src="${item.thumb}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=600&q=80'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-maroon-deep via-transparent to-transparent opacity-80"></div>
+                            
+                            <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full ${isShort ? 'bg-orange-600' : 'bg-red-600'} text-white font-bold text-[10px] uppercase tracking-wider flex items-center space-x-1">
+                                <i class="fas ${isShort ? 'fa-mobile-screen-button' : 'fa-video'}"></i>
+                                <span>${isShort ? 'Sacred Short' : 'Long Video'}</span>
+                            </span>
+
+                            <button onclick="playMediaInModal('${item.id}')" class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                                <div class="w-12 h-12 rounded-full bg-saffron text-maroon-deep flex items-center justify-center text-xl shadow-lg transform group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-play ml-1"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="p-4 space-y-1.5">
+                            <div class="flex items-center justify-between text-[11px] text-saffron">
+                                <span><i class="fas fa-tag mr-1"></i>${item.category}</span>
+                                <span class="text-gray-400 font-mono">${item.tag}</span>
+                            </div>
+                            <h3 class="font-bold heading-serif text-gold text-base group-hover:text-saffron transition-colors line-clamp-2">${item.title}</h3>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4 pt-1 flex items-center justify-between border-t border-gold/10 text-xs">
+                        <button onclick="playMediaInModal('${item.id}')" class="font-bold text-gold hover:text-saffron flex items-center space-x-1">
+                            <i class="fas fa-circle-play"></i>
+                            <span>Watch Direct</span>
+                        </button>
+                        <button onclick="toggleFavorite('${item.id}')" class="text-${favoriteIds.has(item.id) ? 'saffron' : 'gray-400'} hover:text-saffron p-1" title="${favoriteIds.has(item.id) ? 'Remove from favorites' : 'Save to favorites'}">
+                            <i class="fas fa-bookmark text-xs"></i>
+                        </button>
+                        <button onclick="deleteMediaItem('${item.id}')" class="text-gray-400 hover:text-red-400 p-1" title="Delete Content">
+                            <i class="fas fa-trash-can text-xs"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const type = document.querySelector('input[name="mediaType"]:checked').value;
+            const title = document.getElementById('inputTitle').value.trim();
+            const rawUrl = document.getElementById('inputUrl').value.trim();
+            const category = document.getElementById('inputCategory').value;
+            const tag = document.getElementById('inputTag').value.trim() || (type === 'short' ? 'Sacred Short' : 'Devotional Video');
+            let thumb = document.getElementById('inputThumb').value.trim();
+
+            const extractedId = extractYouTubeVideoId(rawUrl);
+            let embedUrl = rawUrl;
+
+            if (extractedId) {
+                embedUrl = `https://www.youtube-nocookie.com/embed/${extractedId}`;
+                if (!thumb) {
+                    thumb = `https://img.youtube.com/vi/${extractedId}/hqdefault.jpg`;
+                }
+            } else {
+                if (!thumb) {
+                    thumb = type === 'short' 
+                        ? 'https://images.unsplash.com/photo-1620052581237-5d36667be337?auto=format&fit=crop&w=600&q=80'
+                        : 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=600&q=80';
+                }
+            }
+
+            const newItem = {
+                id: 'm_' + Date.now(),
+                type,
+                title,
+                category,
+                tag,
+                thumb,
+                embedUrl
+            };
+
+            mediaStore.unshift(newItem);
+            saveMediaStore();
+            filterMediaGrid();
+            closeAddMediaModal();
+            showToast(`${type === 'short' ? 'Sacred Short' : 'Long Video'} published successfully!`);
+            e.target.reset();
+            document.getElementById('ytPreviewContainer').classList.add('hidden');
+        }
+
+        function deleteMediaItem(id) {
+            mediaStore = mediaStore.filter(i => i.id !== id);
+            favoriteIds.delete(id);
+            recentIds = recentIds.filter(recentId => recentId !== id);
+            saveLibraryPreferences();
+            saveMediaStore();
+            filterMediaGrid();
+            showToast('Item deleted from studio grid');
+        }
+
+        function toggleFavorite(id) {
+            if (favoriteIds.has(id)) {
+                favoriteIds.delete(id);
+                showToast('Removed from favorites');
+            } else {
+                favoriteIds.add(id);
+                showToast('Saved to favorites');
+            }
+            saveLibraryPreferences();
+            updateCounts();
+            filterMediaGrid();
+        }
+
+        function playMediaInModal(id) {
+            const item = mediaStore.find(i => i.id === id);
+            if (!item) return;
+
+            if (!item.embedUrl) {
+                showToast('Add a YouTube URL to play this title');
+                return;
+            }
+
+            recentIds = [id, ...recentIds.filter(recentId => recentId !== id)].slice(0, 12);
+            saveLibraryPreferences();
+
+            const modal = document.getElementById('playerModal');
+            const iframe = document.getElementById('modalIframe');
+            const title = document.getElementById('playerModalTitle');
+            const badge = document.getElementById('playerBadge');
+            const tag = document.getElementById('playerTag');
+            const aspectWrapper = document.getElementById('aspectWrapper');
+
+            iframe.src = item.embedUrl;
+            title.innerText = item.title;
+            tag.innerText = `${item.category} • ${item.tag}`;
+            badge.innerText = item.type === 'short' ? 'Sacred Short' : 'Long Video';
+
+            if (item.type === 'short') {
+                aspectWrapper.className = "w-[280px] sm:w-[320px] aspect-[9/16] rounded-xl overflow-hidden border border-gold/30 bg-black shadow-2xl";
+            } else {
+                aspectWrapper.className = "w-full aspect-video rounded-xl overflow-hidden border border-gold/30 bg-black";
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closePlayerModal() {
+            document.getElementById('modalIframe').src = '';
+            document.getElementById('playerModal').classList.add('hidden');
+        }
+
+        function openAddMediaModal() { document.getElementById('addMediaModal').classList.remove('hidden'); }
+        function closeAddMediaModal() { 
+            document.getElementById('addMediaModal').classList.add('hidden'); 
+            document.getElementById('ytPreviewContainer').classList.add('hidden');
+        }
+
+        function exportLibrary() {
+            const payload = { exportedAt: new Date().toISOString(), media: mediaStore, favorites: [...favoriteIds], recentlyPlayed: recentIds };
+            const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'indian-bhakti-dhara-library.json';
+            link.click();
+            URL.revokeObjectURL(link.href);
+            showToast('Library exported successfully');
+        }
+
+        // 108 Mala Beads Counter Functions
+        function incrementMalaBead() {
+            malaCount++;
+            if (malaCount >= 108) {
+                malaCount = 0;
+                malaCycles++;
+                document.getElementById('malaCycleCounter').innerText = malaCycles;
+                showToast('ॐ 108 Mala Cycle Completed! Har Har Mahadev!');
+            }
+            document.getElementById('malaCounter').innerText = `${malaCount} / 108`;
+        }
+
+        function resetMalaCount() {
+            malaCount = 0;
+            malaCycles = 0;
+            document.getElementById('malaCounter').innerText = `0 / 108`;
+            document.getElementById('malaCycleCounter').innerText = `0`;
+            showToast('Mala Counter Reset');
+        }
+
+        // Audio Player Functions
+        function loadAudioPlaylist() {
+            const container = document.getElementById('playlistContainer');
+            container.innerHTML = '';
+            audioPlaylist.forEach((t, i) => {
+                const item = document.createElement('div');
+                item.className = `p-3 rounded-xl border flex items-center justify-between cursor-pointer transition-all ${i === currentAudioIndex ? 'bg-gold/20 border-gold text-gold font-semibold' : 'bg-maroon-deep/50 border-gold/10 text-gray-300 hover:bg-gold/10'}`;
+                item.onclick = () => selectAudioTrack(i);
+                item.innerHTML = `
+                    <div class="flex items-center space-x-3 overflow-hidden">
+                        <span class="text-xs font-mono opacity-60">${i + 1}</span>
+                        <div class="truncate text-xs">
+                            <p class="font-medium truncate">${t.title}</p>
+                            <p class="text-[10px] opacity-70">${t.god}</p>
+                        </div>
+                    </div>
+                    <i class="fas ${i === currentAudioIndex && isAudioPlaying ? 'fa-pause' : 'fa-play'} text-xs"></i>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function selectAudioTrack(idx) {
+            currentAudioIndex = idx;
+            const t = audioPlaylist[currentAudioIndex];
+            document.getElementById('currentTrackTitle').innerText = t.title;
+            document.getElementById('currentTrackArtist').innerText = `${t.god} • Indian Bhakti Dhara`;
+            mainAudio.src = t.src;
+            loadAudioPlaylist();
+            mainAudio.play();
+            isAudioPlaying = true;
+            document.getElementById('playIcon').className = 'fas fa-pause';
+        }
+
+        function toggleAudioPlay() {
+            if (!mainAudio.src) { selectAudioTrack(0); return; }
+            if (isAudioPlaying) {
+                mainAudio.pause();
+                isAudioPlaying = false;
+                document.getElementById('playIcon').className = 'fas fa-play ml-1';
+            } else {
+                mainAudio.play();
+                isAudioPlaying = true;
+                document.getElementById('playIcon').className = 'fas fa-pause';
+            }
+            loadAudioPlaylist();
+        }
+
+        function prevTrack() {
+            currentAudioIndex = (currentAudioIndex - 1 + audioPlaylist.length) % audioPlaylist.length;
+            selectAudioTrack(currentAudioIndex);
+        }
+
+        function nextTrack() {
+            currentAudioIndex = (currentAudioIndex + 1) % audioPlaylist.length;
+            selectAudioTrack(currentAudioIndex);
+        }
+
+        // Sloka Generator Functions
+        function generateNextSloka() {
+            slokaIndex = (slokaIndex + 1) % slokasCollection.length;
+            const item = slokasCollection[slokaIndex];
+            document.getElementById('slokaSanskrit').innerText = `"${item.sanskrit}"`;
+            document.getElementById('slokaHindi').innerText = `"${item.hindi}"`;
+            document.getElementById('slokaEnglish').innerText = `"${item.english}"`;
+            document.getElementById('slokaSource').innerText = item.source;
+        }
+
+        function copySlokaText() {
+            const item = slokasCollection[slokaIndex];
+            const fullText = `${item.sanskrit}\n${item.hindi}\n${item.english}\n${item.source}`;
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = fullText;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            showToast('Sloka copied to clipboard!');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+
+        function openGithubModal() { document.getElementById('githubModal').classList.remove('hidden'); }
+        function closeGithubModal() { document.getElementById('githubModal').classList.add('hidden'); }
+        function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+
+        window.onload = function() {
+            loadLibraryPreferences();
+            initMediaStore();
+            loadAudioPlaylist();
+            document.getElementById('panchangDate').innerText = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        };
+    </script>
+</body>
+</html>
