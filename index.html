@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2C0005">
+    <meta name="description" content="Indian Bhakti Dhara premium devotional media library, mantras, slokas, and sacred community links.">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23FFD700'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55' fill='%232C0005'%3E%E0%A5%90%3C/text%3E%3C/svg%3E">
     <title>Indian Bhakti Dhara | Sacred Devotional Hub & Sanatan Wisdom</title>
 
     <!-- Tailwind CSS CDN -->
@@ -186,6 +190,11 @@
                         <span class="hidden sm:inline">Import & Deploy</span>
                     </button>
 
+                    <button id="installAppBtn" onclick="installApp()" class="hidden items-center space-x-2 px-3.5 py-2 rounded-full bg-emerald-500/15 border border-emerald-400/40 hover:bg-emerald-500/25 text-emerald-200 text-xs sm:text-sm font-semibold transition-all">
+                        <i class="fas fa-mobile-screen-button"></i>
+                        <span>Install App</span>
+                    </button>
+
                     <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-gold focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
@@ -275,6 +284,10 @@
                     <button onclick="exportLibrary()" class="px-3.5 py-2.5 rounded-full bg-gold/10 border border-gold/30 text-gold hover:bg-gold/20 text-xs font-semibold transition-all">
                         <i class="fas fa-download mr-1"></i> Export Library
                     </button>
+                    <label class="px-3.5 py-2.5 rounded-full bg-gold/10 border border-gold/30 text-gold hover:bg-gold/20 text-xs font-semibold transition-all cursor-pointer">
+                        <i class="fas fa-upload mr-1"></i> Import Library
+                        <input type="file" accept="application/json" onchange="importLibrary(event)" class="hidden">
+                    </label>
                     <button onclick="resetToDefaultMedia()" class="px-3.5 py-2.5 rounded-full bg-gold/10 border border-gold/30 text-gold hover:bg-gold/20 text-xs font-semibold transition-all">
                         <i class="fas fa-rotate-left mr-1"></i> Reset Media
                     </button>
@@ -1352,6 +1365,50 @@
             showToast('Library exported successfully');
         }
 
+        function importLibrary(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = () => {
+                try {
+                    const payload = JSON.parse(reader.result);
+                    if (!Array.isArray(payload.media)) throw new Error('Invalid library');
+                    mediaStore = payload.media.filter(item => item.id && item.title && item.type);
+                    favoriteIds = new Set(Array.isArray(payload.favorites) ? payload.favorites : []);
+                    recentIds = Array.isArray(payload.recentlyPlayed) ? payload.recentlyPlayed : [];
+                    saveLibraryPreferences();
+                    saveMediaStore();
+                    filterMediaGrid();
+                    showToast('Library imported successfully');
+                } catch (error) {
+                    showToast('That library file could not be imported');
+                }
+                event.target.value = '';
+            };
+            reader.readAsText(file);
+        }
+
+        let deferredInstallPrompt;
+
+        function installApp() {
+            if (!deferredInstallPrompt) {
+                showToast('Use your browser menu to install this app');
+                return;
+            }
+            deferredInstallPrompt.prompt();
+            deferredInstallPrompt.userChoice.finally(() => {
+                deferredInstallPrompt = null;
+                document.getElementById('installAppBtn').classList.add('hidden');
+            });
+        }
+
+        function registerApp() {
+            if (!('serviceWorker' in navigator)) return;
+            navigator.serviceWorker.register('sw.js').then(registration => {
+                registration.addEventListener('updatefound', () => showToast('A new app update is ready'));
+            }).catch(() => showToast('Offline mode is unavailable in this browser'));
+        }
+
         // 108 Mala Beads Counter Functions
         function incrementMalaBead() {
             malaCount++;
@@ -1470,7 +1527,15 @@
             initMediaStore();
             loadAudioPlaylist();
             document.getElementById('panchangDate').innerText = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            registerApp();
         };
+
+        window.addEventListener('beforeinstallprompt', event => {
+            event.preventDefault();
+            deferredInstallPrompt = event;
+            document.getElementById('installAppBtn').classList.remove('hidden');
+            document.getElementById('installAppBtn').classList.add('flex');
+        });
     </script>
 </body>
 </html>
